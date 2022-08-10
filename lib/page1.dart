@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 
-class One extends StatelessWidget {
-  const One({Key? key}) : super(key: key);
+class One extends StatefulWidget {
+  String kayum;
+  One({required this.kayum});
 
+  @override
+  State<One> createState() => _OneState();
+}
+
+class _OneState extends State<One> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black38,
       body: Center(
-        child: Text('One'),
+        child: Text(widget.kayum),
       ),
     );
   }
