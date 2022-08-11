@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:new_project/page1.dart'; //page One code in under the page):
+import 'package:lottie/lottie.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,42 +24,15 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  String name = "Kayum";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => One(
-                  kayum: name,
-                ),
-              ),
-            );
-          },
-          child: Text('OK'),
+      body: Container(
+        child: Center(
+          child: Lottie.network(
+              "https://assets1.lottiefiles.com/packages/lf20_tduixm8u.json"),
         ),
       ),
     );
   }
 }
-
-
-// import 'package:flutter/material.dart';
-
-// class One extends StatelessWidget {
-//   String kayum;
-//   One({required this.kayum});
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: Center(
-//         child: Text(kayum),
-//       ),
-//     );
-//   }
-// }
-
